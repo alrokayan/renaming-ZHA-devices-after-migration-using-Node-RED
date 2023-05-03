@@ -1,6 +1,6 @@
 # Renaming ZHA devices after migration
 
-![alt text](https://github.com/alrokayan/renaming-ZHA-devices-after-migration-using-Node-RED/raw/main/screenshot-remaining.png)
+![alt text](https://github.com/alrokayan/renaming-ZHA-devices-after-migration-using-Node-RED/blob/main/screenshot-renaming.png)
 
 After the migration of Zigbee2MQQTT to Zigbee Home Assistant (ZHA), you will notice that the devices name are not migrated. This is a Node-RED flow to copy the devices name from Zigbee2MQTT to ZHA.
 
@@ -20,7 +20,7 @@ Step Six: Then copy and past the content of the file: *renaming.json*
 
 # Regrouping ZHA devices after migration
 
-![alt text](https://github.com/alrokayan/renaming-ZHA-devices-after-migration-using-Node-RED/raw/main/screenshot-regrouping.png)
+![alt text](https://raw.githubusercontent.com/alrokayan/renaming-ZHA-devices-after-migration-using-Node-RED/main/screenshot-regrouping.png)
 
 Step One: BACKUP!
 
@@ -36,7 +36,7 @@ Step Six: Then copy and past the content of the file: *grouping.json*
 
 # Adding prefix to ZHA devices after migration
 
-![alt text](https://github.com/alrokayan/renaming-ZHA-devices-after-migration-using-Node-RED/raw/main/screenshot-prefix.png)
+![alt text](https://raw.githubusercontent.com/alrokayan/renaming-ZHA-devices-after-migration-using-Node-RED/main/screenshot-prefix.png)
 
 This flow is to add the group name as a prefix
 
