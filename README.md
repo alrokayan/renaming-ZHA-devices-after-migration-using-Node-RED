@@ -1,4 +1,4 @@
-# renaming-ZHA-devices-after-migration-using-Node-RED
+# Renaming ZHA devices after migration
 
 ![alt text](https://github.com/alrokayan/renaming-ZHA-devices-after-migration-using-Node-RED/raw/main/screenshot.png)
 
