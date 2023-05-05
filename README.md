@@ -16,7 +16,9 @@ Step Four: Install Node-RED
 
 Step Five: From the top right corner (let's call it the side menu), click -> import
 
-Step Six: Then copy and past the content of the file: *renaming.json*
+Step Six: Then copy and past the content of *renaming.json*
+
+Step Seven: Restart Home Assistant
 
 # Regrouping ZHA devices after migration
 
@@ -32,7 +34,7 @@ Step Four: Install Node-RED
 
 Step Five: From the top right corner (let's call it the side menu), click -> import
 
-Step Six: Then copy and past the content of the file: *grouping.json* 
+Step Six: Then copy and past the content of *grouping.json*
 
 # Adding prefix to ZHA devices after migration
 
@@ -50,7 +52,6 @@ Step Four: Install Node-RED
 
 Step Five: From the top right corner (let's call it the side menu), click -> import
 
-Step Six: Then copy and past the content of the file: *prefix.json* 
-
+Step Six: Then copy and past the content of the file: *prefix.json*
 
 * use the flows here at your owm risk

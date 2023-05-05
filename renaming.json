@@ -12,7 +12,7 @@
     "x": 90,
     "y": 40,
     "wires": [
-        ["bb89a8ed535d629f"]
+        ["f82424feb12b1540"]
     ]
 }, {
     "id": "31bbbb68c6788dae",
@@ -27,7 +27,7 @@
     "encoding": "none",
     "allProps": true,
     "x": 300,
-    "y": 560,
+    "y": 600,
     "wires": [
         ["a0cc99e76936699c"]
     ]
@@ -44,7 +44,7 @@
     "oldrc": false,
     "name": "",
     "x": 609,
-    "y": 240,
+    "y": 280,
     "wires": [
         ["579fdabf628cfa97"],
         [],
@@ -63,7 +63,7 @@
     "oldrc": false,
     "name": "",
     "x": 599,
-    "y": 360,
+    "y": 400,
     "wires": [
         ["9d1e403169204323"],
         [],
@@ -82,7 +82,7 @@
     "oldrc": false,
     "name": "",
     "x": 589,
-    "y": 460,
+    "y": 500,
     "wires": [
         ["31bbbb68c6788dae"],
         [],
@@ -104,11 +104,11 @@
     "include_empty_strings": "",
     "include_null_values": "",
     "x": 510,
-    "y": 560,
+    "y": 600,
     "wires": [
         ["a0ebba33850e561c"]
     ]
-}, { "id": "9b6b13b6bae1e67f", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "address", "targetType": "msg", "statusVal": "address", "statusType": "auto", "x": 1010, "y": 560, "wires": [] }, {
+}, { "id": "9b6b13b6bae1e67f", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "address", "targetType": "msg", "statusVal": "address", "statusType": "auto", "x": 1010, "y": 600, "wires": [] }, {
     "id": "a0ebba33850e561c",
     "type": "change",
     "z": "c3197e3a0e4ae468",
@@ -120,11 +120,11 @@
     "to": "",
     "reg": false,
     "x": 660,
-    "y": 560,
+    "y": 600,
     "wires": [
         ["4648342bd9d8ff5e"]
     ]
-}, { "id": "649018745bda0716", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "name", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 1010, "y": 620, "wires": [] }, {
+}, { "id": "649018745bda0716", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "name", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 1010, "y": 660, "wires": [] }, {
     "id": "67823af078bd15f5",
     "type": "function",
     "z": "c3197e3a0e4ae468",
@@ -136,7 +136,7 @@
     "finalize": "",
     "libs": [],
     "x": 250,
-    "y": 800,
+    "y": 820,
     "wires": [
         ["7713a9e8efa946e8", "7d817ae590fc9313", "b71eba43e5747705", "957e1eb4d71b29df", "f62c0c57def47bf4"]
     ]
@@ -149,7 +149,7 @@
     "action": "",
     "pretty": true,
     "x": 690,
-    "y": 720,
+    "y": 740,
     "wires": [
         ["dfe759c023d45e39", "67823af078bd15f5"]
     ]
@@ -165,11 +165,11 @@
     "overwriteFile": "true",
     "encoding": "none",
     "x": 540,
-    "y": 800,
+    "y": 820,
     "wires": [
         []
     ]
-}, { "id": "7713a9e8efa946e8", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "deviceid", "targetType": "msg", "statusVal": "payload", "statusType": "auto", "x": 470, "y": 840, "wires": [] }, {
+}, { "id": "7713a9e8efa946e8", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "deviceid", "targetType": "msg", "statusVal": "payload", "statusType": "auto", "x": 470, "y": 860, "wires": [] }, {
     "id": "5c065c153d865bee",
     "type": "file in",
     "z": "c3197e3a0e4ae468",
@@ -182,11 +182,11 @@
     "encoding": "none",
     "allProps": false,
     "x": 480,
-    "y": 720,
+    "y": 740,
     "wires": [
         ["f6177d7da4dbe41f"]
     ]
-}, { "id": "dfe759c023d45e39", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 910, "y": 720, "wires": [] }, {
+}, { "id": "dfe759c023d45e39", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 910, "y": 740, "wires": [] }, {
     "id": "f62c0c57def47bf4",
     "type": "file in",
     "z": "c3197e3a0e4ae468",
@@ -199,7 +199,7 @@
     "encoding": "none",
     "allProps": false,
     "x": 490,
-    "y": 980,
+    "y": 1060,
     "wires": [
         ["cf815209764b5029"]
     ]
@@ -212,7 +212,7 @@
     "action": "",
     "pretty": true,
     "x": 710,
-    "y": 980,
+    "y": 1060,
     "wires": [
         ["6a6466f07db6cac2", "ab491bf9139e302d", "89a43c3934bd2d2f"]
     ]
@@ -228,11 +228,11 @@
     "finalize": "",
     "libs": [],
     "x": 250,
-    "y": 1040,
+    "y": 1120,
     "wires": [
         ["c780c021718c5c63", "52e545af028df365"]
     ]
-}, { "id": "6a6466f07db6cac2", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "deviceid", "targetType": "msg", "statusVal": "payload", "statusType": "auto", "x": 870, "y": 980, "wires": [] }, { "id": "ab491bf9139e302d", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 870, "y": 1040, "wires": [] }, {
+}, { "id": "6a6466f07db6cac2", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "deviceid", "targetType": "msg", "statusVal": "payload", "statusType": "auto", "x": 870, "y": 1060, "wires": [] }, { "id": "ab491bf9139e302d", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 870, "y": 1120, "wires": [] }, {
     "id": "c780c021718c5c63",
     "type": "file",
     "z": "c3197e3a0e4ae468",
@@ -244,11 +244,11 @@
     "overwriteFile": "true",
     "encoding": "none",
     "x": 530,
-    "y": 1040,
+    "y": 1120,
     "wires": [
         []
     ]
-}, { "id": "52e545af028df365", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": true, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 450, "y": 1080, "wires": [] }, { "id": "b71eba43e5747705", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 470, "y": 880, "wires": [] }, { "id": "957e1eb4d71b29df", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "name", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 470, "y": 920, "wires": [] }, {
+}, { "id": "52e545af028df365", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": true, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 450, "y": 1160, "wires": [] }, { "id": "b71eba43e5747705", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 470, "y": 920, "wires": [] }, { "id": "957e1eb4d71b29df", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "name", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 470, "y": 980, "wires": [] }, {
     "id": "77a6ee4f838229f4",
     "type": "delay",
     "z": "c3197e3a0e4ae468",
@@ -257,7 +257,7 @@
     "timeout": "5",
     "timeoutUnits": "seconds",
     "rate": "1",
-    "nbRateUnits": "1",
+    "nbRateUnits": "0.5",
     "rateUnits": "second",
     "randomFirst": "1",
     "randomLast": "5",
@@ -266,11 +266,11 @@
     "allowrate": false,
     "outputs": 1,
     "x": 230,
-    "y": 720,
+    "y": 740,
     "wires": [
         ["5c065c153d865bee"]
     ]
-}, { "id": "b49c49d8f2e9ad8e", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 1: Export devices.name.txt", "info": "", "x": 135, "y": 203.33332633972168, "wires": [] }, { "id": "20390d7ef22545f4", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 2: Export devices.address.txt", "info": "", "x": 145, "y": 320.0000238418579, "wires": [] }, { "id": "bf623fdcfac77716", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 3: merge both files", "info": "", "x": 105, "y": 423.3332939147949, "wires": [] }, { "id": "60ab67404d6c43e8", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 4: CSV Parsing and Splitting ", "info": "", "x": 135, "y": 528.3333053588867, "wires": [] }, { "id": "6869c59c1f0274a8", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 5: Read HA entities", "info": "", "x": 115, "y": 689, "wires": [] }, { "id": "8c8086f3865cb0e9", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 6: Renaming entities", "info": "", "x": 115, "y": 770.0000171661377, "wires": [] }, { "id": "d25a1bcb475a7cd2", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 7: Renaming entities", "info": "", "x": 115, "y": 1008.8888702392578, "wires": [] }, {
+}, { "id": "b49c49d8f2e9ad8e", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 1: Export devices.name.txt", "info": "", "x": 135, "y": 243.33332633972168, "wires": [] }, { "id": "20390d7ef22545f4", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 2: Export devices.address.txt", "info": "", "x": 145, "y": 360.0000238418579, "wires": [] }, { "id": "bf623fdcfac77716", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 3: merge both files", "info": "", "x": 105, "y": 463.3332939147949, "wires": [] }, { "id": "60ab67404d6c43e8", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 4: CSV Parsing and Splitting ", "info": "", "x": 135, "y": 568.3333053588867, "wires": [] }, { "id": "6869c59c1f0274a8", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 5: Read HA entities", "info": "", "x": 115, "y": 709, "wires": [] }, { "id": "8c8086f3865cb0e9", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 6: Renaming entities", "info": "", "x": 115, "y": 790.0000171661377, "wires": [] }, { "id": "d25a1bcb475a7cd2", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 7: Renaming entities", "info": "", "x": 115, "y": 1088.8888702392578, "wires": [] }, {
     "id": "4648342bd9d8ff5e",
     "type": "switch",
     "z": "c3197e3a0e4ae468",
@@ -282,7 +282,7 @@
     "repair": false,
     "outputs": 1,
     "x": 820,
-    "y": 560,
+    "y": 600,
     "wires": [
         ["9b6b13b6bae1e67f", "649018745bda0716", "77a6ee4f838229f4"]
     ]
@@ -290,7 +290,7 @@
     "id": "bb89a8ed535d629f",
     "type": "exec",
     "z": "c3197e3a0e4ae468",
-    "command": "cp /config/.storage/core.entity_registry /tmp/core.entity_registry.bkp",
+    "command": "cp /config/.storage/core.entity_registry /config/tmp/core.entity_registry.bkp.$RANDOM",
     "addpay": "",
     "append": "",
     "useSpawn": "false",
@@ -298,8 +298,8 @@
     "winHide": false,
     "oldrc": false,
     "name": "",
-    "x": 410,
-    "y": 140,
+    "x": 680,
+    "y": 120,
     "wires": [
         ["9f2e38591abfdad3"],
         [],
@@ -309,7 +309,7 @@
     "id": "9f2e38591abfdad3",
     "type": "exec",
     "z": "c3197e3a0e4ae468",
-    "command": "cp /config/.storage/core.device_registry /tmp/core.device_registry.bkp.$RANDOM",
+    "command": "cp /config/.storage/core.device_registry /config/tmp/core.device_registry.bkp.$RANDOM",
     "addpay": "",
     "append": "",
     "useSpawn": "false",
@@ -317,11 +317,30 @@
     "winHide": false,
     "oldrc": false,
     "name": "",
-    "x": 1010,
-    "y": 140,
+    "x": 690,
+    "y": 200,
     "wires": [
         ["e6823a04d84073fd"],
         [],
         []
     ]
-}, { "id": "8ad68615a7d2ecb5", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 0: Backup files", "info": "", "x": 95, "y": 106.66666412353516, "wires": [] }]
+}, { "id": "8ad68615a7d2ecb5", "type": "comment", "z": "c3197e3a0e4ae468", "name": "Step 0: Backup files", "info": "", "x": 95, "y": 86.66666412353516, "wires": [] }, {
+    "id": "f82424feb12b1540",
+    "type": "exec",
+    "z": "c3197e3a0e4ae468",
+    "command": "mkdir /config/tmp",
+    "addpay": "",
+    "append": "",
+    "useSpawn": "false",
+    "timer": "",
+    "winHide": false,
+    "oldrc": false,
+    "name": "",
+    "x": 250,
+    "y": 120,
+    "wires": [
+        ["bb89a8ed535d629f"],
+        [],
+        []
+    ]
+}]
