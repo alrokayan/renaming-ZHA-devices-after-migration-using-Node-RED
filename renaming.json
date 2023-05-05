@@ -248,7 +248,7 @@
     "wires": [
         []
     ]
-}, { "id": "52e545af028df365", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 450, "y": 1080, "wires": [] }, { "id": "b71eba43e5747705", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 470, "y": 880, "wires": [] }, { "id": "957e1eb4d71b29df", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "name", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 470, "y": 920, "wires": [] }, {
+}, { "id": "52e545af028df365", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": true, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 450, "y": 1080, "wires": [] }, { "id": "b71eba43e5747705", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "payload", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 470, "y": 880, "wires": [] }, { "id": "957e1eb4d71b29df", "type": "debug", "z": "c3197e3a0e4ae468", "name": "", "active": false, "tosidebar": true, "console": false, "tostatus": true, "complete": "name", "targetType": "msg", "statusVal": "name", "statusType": "auto", "x": 470, "y": 920, "wires": [] }, {
     "id": "77a6ee4f838229f4",
     "type": "delay",
     "z": "c3197e3a0e4ae468",
@@ -309,7 +309,7 @@
     "id": "9f2e38591abfdad3",
     "type": "exec",
     "z": "c3197e3a0e4ae468",
-    "command": "cp /config/.storage/core.device_registry /tmp/core.device_registry.bkp",
+    "command": "cp /config/.storage/core.device_registry /tmp/core.device_registry.bkp.$RANDOM",
     "addpay": "",
     "append": "",
     "useSpawn": "false",
@@ -317,7 +317,7 @@
     "winHide": false,
     "oldrc": false,
     "name": "",
-    "x": 970,
+    "x": 1010,
     "y": 140,
     "wires": [
         ["e6823a04d84073fd"],
