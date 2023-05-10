@@ -1,0 +1,1475 @@
+[
+    {
+        "id": "f6964f0b8c0fa18c",
+        "type": "tab",
+        "label": "remove",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "320b4763bc5ebfc8",
+        "type": "tab",
+        "label": "prefix",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ceaa348efda03b13",
+        "type": "tab",
+        "label": "regrouping",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c3197e3a0e4ae468",
+        "type": "tab",
+        "label": "renameing",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c6fdc6b.3374238",
+        "type": "server",
+        "name": "Home Assistant",
+        "addon": true
+    },
+    {
+        "id": "7522cae2.767454",
+        "type": "server",
+        "name": "Home Assistant",
+        "addon": true
+    },
+    {
+        "id": "ade0fffcf91a8c16",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "core-mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "737bc7e4.5f6398",
+        "type": "server",
+        "name": "Home Assistant",
+        "addon": true
+    },
+    {
+        "id": "685c6d3d7b292d9d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "core-mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "058c53f612152f0a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "core-mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "09797ff1d62a3e8f",
+        "type": "inject",
+        "z": "f6964f0b8c0fa18c",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "94a4f920eab179a3"
+            ]
+        ]
+    },
+    {
+        "id": "94a4f920eab179a3",
+        "type": "file in",
+        "z": "f6964f0b8c0fa18c",
+        "name": "",
+        "filename": "/config/pending.txt",
+        "filenameType": "str",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "df1e94738eae7ec8"
+            ]
+        ]
+    },
+    {
+        "id": "df1e94738eae7ec8",
+        "type": "mqtt out",
+        "z": "f6964f0b8c0fa18c",
+        "name": "",
+        "topic": "zigbee2mqtt_f2/bridge/request/device/remove",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "application/json",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "685c6d3d7b292d9d",
+        "x": 840,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2df957e1106323bb",
+        "type": "template",
+        "z": "f6964f0b8c0fa18c",
+        "name": "force: true",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\"id\":\"{{payload}}\",\"force\":true}",
+        "output": "json",
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "df1e94738eae7ec8"
+            ]
+        ]
+    },
+    {
+        "id": "3a65c934b98db8fc",
+        "type": "file in",
+        "z": "f6964f0b8c0fa18c",
+        "name": "",
+        "filename": "/config/pending.txt",
+        "filenameType": "str",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "2df957e1106323bb"
+            ]
+        ]
+    },
+    {
+        "id": "587da02a8f1ce23e",
+        "type": "inject",
+        "z": "f6964f0b8c0fa18c",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 90,
+        "y": 280,
+        "wires": [
+            [
+                "3a65c934b98db8fc"
+            ]
+        ]
+    },
+    {
+        "id": "14ad32aefd3001b1",
+        "type": "inject",
+        "z": "f6964f0b8c0fa18c",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 90,
+        "y": 80,
+        "wires": [
+            [
+                "b9b6ad3b8b430931"
+            ]
+        ]
+    },
+    {
+        "id": "b9b6ad3b8b430931",
+        "type": "exec",
+        "z": "f6964f0b8c0fa18c",
+        "command": "grep '^\\s*0x' /config/pending.raw.txt | uniq > /config/pending.txt",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ec71b91849b74db6",
+        "type": "comment",
+        "z": "f6964f0b8c0fa18c",
+        "name": "Soft remove devices",
+        "info": "",
+        "x": 130,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "089c949a87ea0d42",
+        "type": "comment",
+        "z": "f6964f0b8c0fa18c",
+        "name": "FORCE remove devices",
+        "info": "",
+        "x": 140,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "84c49d18db7d1a60",
+        "type": "comment",
+        "z": "f6964f0b8c0fa18c",
+        "name": "pending.txt file creation",
+        "info": "",
+        "x": 140,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1cb51726d9d22cc1",
+        "type": "inject",
+        "z": "320b4763bc5ebfc8",
+        "name": "File Creation (no payload)",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "88c743b86d404ff3"
+            ]
+        ]
+    },
+    {
+        "id": "88c743b86d404ff3",
+        "type": "exec",
+        "z": "320b4763bc5ebfc8",
+        "command": "grep '^\\s*0x' /config/raw.txt | uniq > /config/devices.txt",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 590,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2962b4db61697d4a",
+        "type": "template",
+        "z": "320b4763bc5ebfc8",
+        "name": "Rename device",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\"from\": \"{{payload}}\", \"to\": \"{{groupname}} {{payload}}\",\"homeassistant_rename\":false}",
+        "output": "json",
+        "x": 680,
+        "y": 400,
+        "wires": [
+            [
+                "00289727fe9d7e28",
+                "c9d4267e45a8f70d"
+            ]
+        ]
+    },
+    {
+        "id": "054fdca41686863d",
+        "type": "file in",
+        "z": "320b4763bc5ebfc8",
+        "name": "",
+        "filename": "/config/devices.txt",
+        "filenameType": "str",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 490,
+        "y": 400,
+        "wires": [
+            [
+                "2962b4db61697d4a"
+            ]
+        ]
+    },
+    {
+        "id": "6cbfd5d8eca0c0c4",
+        "type": "inject",
+        "z": "320b4763bc5ebfc8",
+        "name": "Add prefix (double click here)",
+        "props": [
+            {
+                "p": "groupname",
+                "v": "F1 Floor Lobby",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "054fdca41686863d"
+            ]
+        ]
+    },
+    {
+        "id": "e2cad60d2b934a35",
+        "type": "comment",
+        "z": "320b4763bc5ebfc8",
+        "name": "Step 1: open Zigbee2MQTT web UI -> search to see only the targeted devices  -> then just select all (cmd + C) -> past it AS-IS in /config/raw.txt",
+        "info": "",
+        "x": 580,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "51ab7b793f0e4dad",
+        "type": "comment",
+        "z": "320b4763bc5ebfc8",
+        "name": "Step 2: click on File Creation",
+        "info": "",
+        "x": 220,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "00289727fe9d7e28",
+        "type": "debug",
+        "z": "320b4763bc5ebfc8",
+        "name": "debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "counter",
+        "x": 870,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3769502cdb3760f1",
+        "type": "comment",
+        "z": "320b4763bc5ebfc8",
+        "name": "Step 4: Inject the group name in msg.groupname",
+        "info": "",
+        "x": 280,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b9aa301d31fa93a2",
+        "type": "comment",
+        "z": "320b4763bc5ebfc8",
+        "name": "Renaming devices with the group name as a prefex",
+        "info": "",
+        "x": 290,
+        "y": 330,
+        "wires": []
+    },
+    {
+        "id": "24226e9f90844201",
+        "type": "comment",
+        "z": "320b4763bc5ebfc8",
+        "name": "Step 3: Edit MQTT broker details (if needed)",
+        "info": "",
+        "x": 270,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6e983f94ad20ebe8",
+        "type": "mqtt out",
+        "z": "320b4763bc5ebfc8",
+        "name": "",
+        "topic": "zigbee2mqtt_f2/bridge/request/device/rename",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "685c6d3d7b292d9d",
+        "x": 460,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c9d4267e45a8f70d",
+        "type": "link out",
+        "z": "320b4763bc5ebfc8",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "da1ea3b7150d85b3"
+        ],
+        "x": 855,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "da1ea3b7150d85b3",
+        "type": "link in",
+        "z": "320b4763bc5ebfc8",
+        "name": "link in 2",
+        "links": [
+            "c9d4267e45a8f70d"
+        ],
+        "x": 65,
+        "y": 280,
+        "wires": [
+            [
+                "7b5918b687fd6569"
+            ]
+        ]
+    },
+    {
+        "id": "7b5918b687fd6569",
+        "type": "delay",
+        "z": "320b4763bc5ebfc8",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "6e983f94ad20ebe8"
+            ]
+        ]
+    },
+    {
+        "id": "e36f0a5cf948ea6f",
+        "type": "inject",
+        "z": "ceaa348efda03b13",
+        "name": "File Creation (no payload)",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "3a9589bb9c8b1eb5"
+            ]
+        ]
+    },
+    {
+        "id": "e2c4307e0dc1396d",
+        "type": "mqtt out",
+        "z": "ceaa348efda03b13",
+        "name": "",
+        "topic": "zigbee2mqtt_f2/bridge/request/group/members/add",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "685c6d3d7b292d9d",
+        "x": 480,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ab49e7dbf48b8724",
+        "type": "template",
+        "z": "ceaa348efda03b13",
+        "name": "add device to a group",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\"group\": \"{{groupname}}\", \"device\": \"{{payload}}\"}",
+        "output": "json",
+        "x": 700,
+        "y": 400,
+        "wires": [
+            [
+                "f3ec6ffa3e7a3327",
+                "f587501211149924"
+            ]
+        ]
+    },
+    {
+        "id": "3a9589bb9c8b1eb5",
+        "type": "exec",
+        "z": "ceaa348efda03b13",
+        "command": "grep '^\\s*0x' /config/raw.txt | uniq > devices.txt",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a00b63304ef66831",
+        "type": "file in",
+        "z": "ceaa348efda03b13",
+        "name": "",
+        "filename": "/config/devices.txt",
+        "filenameType": "str",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 490,
+        "y": 400,
+        "wires": [
+            [
+                "ab49e7dbf48b8724"
+            ]
+        ]
+    },
+    {
+        "id": "bb8783b58216adca",
+        "type": "inject",
+        "z": "ceaa348efda03b13",
+        "name": "Grouping (double click here)",
+        "props": [
+            {
+                "p": "groupname",
+                "v": "F1 Floor Lobby",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "a00b63304ef66831"
+            ]
+        ]
+    },
+    {
+        "id": "f94cb5298a340dfc",
+        "type": "comment",
+        "z": "ceaa348efda03b13",
+        "name": "Step 4: Inject the group name in msg.groupname",
+        "info": "",
+        "x": 280,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4ed3a7571e15eaed",
+        "type": "comment",
+        "z": "ceaa348efda03b13",
+        "name": "Step 1: open Zigbee2MQTT web UI -> search to see only the targeted devices  -> then just select all (cmd + C) -> past it AS-IS in /config/raw.txt",
+        "info": "",
+        "x": 580,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "38ee20ffb7d35a50",
+        "type": "comment",
+        "z": "ceaa348efda03b13",
+        "name": "Step 2: click on File Creation",
+        "info": "",
+        "x": 220,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "713a45a3fbacea1c",
+        "type": "comment",
+        "z": "ceaa348efda03b13",
+        "name": "Step 3: Edit MQTT broker details (if needed)",
+        "info": "",
+        "x": 267.5,
+        "y": 227.5,
+        "wires": []
+    },
+    {
+        "id": "f3ec6ffa3e7a3327",
+        "type": "debug",
+        "z": "ceaa348efda03b13",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "counter",
+        "x": 890,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5a240ecac87c1c8b",
+        "type": "comment",
+        "z": "ceaa348efda03b13",
+        "name": "Grouping devices",
+        "info": "",
+        "x": 180,
+        "y": 330,
+        "wires": []
+    },
+    {
+        "id": "f587501211149924",
+        "type": "link out",
+        "z": "ceaa348efda03b13",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "9ed6fa95fe853346"
+        ],
+        "x": 865,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9ed6fa95fe853346",
+        "type": "link in",
+        "z": "ceaa348efda03b13",
+        "name": "link in 1",
+        "links": [
+            "f587501211149924"
+        ],
+        "x": 55,
+        "y": 280,
+        "wires": [
+            [
+                "7e1dc2ded397e5d3"
+            ]
+        ]
+    },
+    {
+        "id": "7e1dc2ded397e5d3",
+        "type": "delay",
+        "z": "ceaa348efda03b13",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "e2c4307e0dc1396d"
+            ]
+        ]
+    },
+    {
+        "id": "687f81f784134e1e",
+        "type": "inject",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "f82424feb12b1540"
+            ]
+        ]
+    },
+    {
+        "id": "31bbbb68c6788dae",
+        "type": "file in",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "filename": "/config/zigbee2mqtt/devices.csv",
+        "filenameType": "str",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 300,
+        "y": 600,
+        "wires": [
+            [
+                "a0cc99e76936699c"
+            ]
+        ]
+    },
+    {
+        "id": "e6823a04d84073fd",
+        "type": "exec",
+        "z": "c3197e3a0e4ae468",
+        "command": "grep -A 1 \"^\\s*  \\'0x\" /config/zigbee2mqtt/configuration.yaml | sed '/--/d' | sed \"/  \\'0x/d\" | sed 's/    friendly_name: //g' > devices.name.txt",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 609,
+        "y": 280,
+        "wires": [
+            [
+                "579fdabf628cfa97"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "579fdabf628cfa97",
+        "type": "exec",
+        "z": "c3197e3a0e4ae468",
+        "command": "grep \"^\\s*  \\'0x\" /config/zigbee2mqtt/configuration.yaml | sed \"s/  \\'0x//g\" | sed \"s/\\'://g\" | sed 's/../&:/g;s/:$//' > devices.address.txt",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 599,
+        "y": 400,
+        "wires": [
+            [
+                "9d1e403169204323"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9d1e403169204323",
+        "type": "exec",
+        "z": "c3197e3a0e4ae468",
+        "command": "paste -d $',' devices.address.txt devices.name.txt > /config/zigbee2mqtt/devices.csv;rm devices.name.txt devices.address.txt",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 589,
+        "y": 500,
+        "wires": [
+            [
+                "31bbbb68c6788dae"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a0cc99e76936699c",
+        "type": "csv",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 510,
+        "y": 600,
+        "wires": [
+            [
+                "a0ebba33850e561c"
+            ]
+        ]
+    },
+    {
+        "id": "9b6b13b6bae1e67f",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "address",
+        "targetType": "msg",
+        "statusVal": "address",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a0ebba33850e561c",
+        "type": "change",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "address",
+                "pt": "msg",
+                "to": "payload.col1",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "name",
+                "pt": "msg",
+                "to": "payload.col2",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 600,
+        "wires": [
+            [
+                "4648342bd9d8ff5e"
+            ]
+        ]
+    },
+    {
+        "id": "649018745bda0716",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "name",
+        "targetType": "msg",
+        "statusVal": "name",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "67823af078bd15f5",
+        "type": "function",
+        "z": "c3197e3a0e4ae468",
+        "name": "renaming entities",
+        "func": "msg.payload.data.entities.forEach((aDevice) => {\n    if (aDevice.unique_id.includes(msg.address))\n    {\n        aDevice.name = msg.name;\n        msg.deviceid = aDevice.device_id;\n    }\n});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 820,
+        "wires": [
+            [
+                "7713a9e8efa946e8",
+                "7d817ae590fc9313",
+                "b71eba43e5747705",
+                "957e1eb4d71b29df",
+                "f62c0c57def47bf4"
+            ]
+        ]
+    },
+    {
+        "id": "f6177d7da4dbe41f",
+        "type": "json",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 690,
+        "y": 740,
+        "wires": [
+            [
+                "dfe759c023d45e39",
+                "67823af078bd15f5"
+            ]
+        ]
+    },
+    {
+        "id": "7d817ae590fc9313",
+        "type": "file",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "filename": "/config/.storage/core.entity_registry",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 540,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7713a9e8efa946e8",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "deviceid",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 470,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "5c065c153d865bee",
+        "type": "file in",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "filename": "/config/.storage/core.entity_registry",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 480,
+        "y": 740,
+        "wires": [
+            [
+                "f6177d7da4dbe41f"
+            ]
+        ]
+    },
+    {
+        "id": "dfe759c023d45e39",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "name",
+        "statusType": "auto",
+        "x": 910,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f62c0c57def47bf4",
+        "type": "file in",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "filename": "/config/.storage/core.device_registry",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 490,
+        "y": 1060,
+        "wires": [
+            [
+                "cf815209764b5029"
+            ]
+        ]
+    },
+    {
+        "id": "cf815209764b5029",
+        "type": "json",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 710,
+        "y": 1060,
+        "wires": [
+            [
+                "6a6466f07db6cac2",
+                "ab491bf9139e302d",
+                "89a43c3934bd2d2f"
+            ]
+        ]
+    },
+    {
+        "id": "89a43c3934bd2d2f",
+        "type": "function",
+        "z": "c3197e3a0e4ae468",
+        "name": "renaming devices",
+        "func": "msg.payload.data.devices.forEach((aDevice) => {\n    if (aDevice.id.includes(msg.deviceid))\n        aDevice.name_by_user = msg.name;\n});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 1120,
+        "wires": [
+            [
+                "c780c021718c5c63",
+                "52e545af028df365"
+            ]
+        ]
+    },
+    {
+        "id": "6a6466f07db6cac2",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "deviceid",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 870,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "ab491bf9139e302d",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "name",
+        "statusType": "auto",
+        "x": 870,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "c780c021718c5c63",
+        "type": "file",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "filename": "/config/.storage/core.device_registry",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 530,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52e545af028df365",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "name",
+        "statusType": "auto",
+        "x": 450,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "b71eba43e5747705",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "name",
+        "statusType": "auto",
+        "x": 470,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "957e1eb4d71b29df",
+        "type": "debug",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "name",
+        "targetType": "msg",
+        "statusVal": "name",
+        "statusType": "auto",
+        "x": 470,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "77a6ee4f838229f4",
+        "type": "delay",
+        "z": "c3197e3a0e4ae468",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 230,
+        "y": 740,
+        "wires": [
+            [
+                "5c065c153d865bee"
+            ]
+        ]
+    },
+    {
+        "id": "b49c49d8f2e9ad8e",
+        "type": "comment",
+        "z": "c3197e3a0e4ae468",
+        "name": "Step 1: Export devices.name.txt",
+        "info": "",
+        "x": 135,
+        "y": 243.33332633972168,
+        "wires": []
+    },
+    {
+        "id": "20390d7ef22545f4",
+        "type": "comment",
+        "z": "c3197e3a0e4ae468",
+        "name": "Step 2: Export devices.address.txt",
+        "info": "",
+        "x": 145,
+        "y": 360.0000238418579,
+        "wires": []
+    },
+    {
+        "id": "bf623fdcfac77716",
+        "type": "comment",
+        "z": "c3197e3a0e4ae468",
+        "name": "Step 3: merge both files",
+        "info": "",
+        "x": 105,
+        "y": 463.3332939147949,
+        "wires": []
+    },
+    {
+        "id": "60ab67404d6c43e8",
+        "type": "comment",
+        "z": "c3197e3a0e4ae468",
+        "name": "Step 4: CSV Parsing and Splitting ",
+        "info": "",
+        "x": 135,
+        "y": 568.3333053588867,
+        "wires": []
+    },
+    {
+        "id": "6869c59c1f0274a8",
+        "type": "comment",
+        "z": "c3197e3a0e4ae468",
+        "name": "Step 5: Read HA entities",
+        "info": "",
+        "x": 115,
+        "y": 709,
+        "wires": []
+    },
+    {
+        "id": "8c8086f3865cb0e9",
+        "type": "comment",
+        "z": "c3197e3a0e4ae468",
+        "name": "Step 6: Renaming entities",
+        "info": "",
+        "x": 115,
+        "y": 790.0000171661377,
+        "wires": []
+    },
+    {
+        "id": "d25a1bcb475a7cd2",
+        "type": "comment",
+        "z": "c3197e3a0e4ae468",
+        "name": "Step 7: Renaming entities",
+        "info": "",
+        "x": 115,
+        "y": 1088.8888702392578,
+        "wires": []
+    },
+    {
+        "id": "4648342bd9d8ff5e",
+        "type": "switch",
+        "z": "c3197e3a0e4ae468",
+        "name": "is not null",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 820,
+        "y": 600,
+        "wires": [
+            [
+                "9b6b13b6bae1e67f",
+                "649018745bda0716",
+                "77a6ee4f838229f4"
+            ]
+        ]
+    },
+    {
+        "id": "bb89a8ed535d629f",
+        "type": "exec",
+        "z": "c3197e3a0e4ae468",
+        "command": "cp /config/.storage/core.entity_registry /config/tmp/core.entity_registry.bkp.$RANDOM",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "9f2e38591abfdad3"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9f2e38591abfdad3",
+        "type": "exec",
+        "z": "c3197e3a0e4ae468",
+        "command": "cp /config/.storage/core.device_registry /config/tmp/core.device_registry.bkp.$RANDOM",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "e6823a04d84073fd"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8ad68615a7d2ecb5",
+        "type": "comment",
+        "z": "c3197e3a0e4ae468",
+        "name": "Step 0: Backup files",
+        "info": "",
+        "x": 95,
+        "y": 86.66666412353516,
+        "wires": []
+    },
+    {
+        "id": "f82424feb12b1540",
+        "type": "exec",
+        "z": "c3197e3a0e4ae468",
+        "command": "mkdir /config/tmp",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 250,
+        "y": 120,
+        "wires": [
+            [
+                "bb89a8ed535d629f"
+            ],
+            [],
+            []
+        ]
+    }
+]
