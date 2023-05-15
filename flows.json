@@ -10,7 +10,7 @@
     {
         "id": "320b4763bc5ebfc8",
         "type": "tab",
-        "label": "prefix",
+        "label": "prefix insert",
         "disabled": false,
         "info": "",
         "env": []
@@ -18,7 +18,7 @@
     {
         "id": "ceaa348efda03b13",
         "type": "tab",
-        "label": "regrouping",
+        "label": "grouping",
         "disabled": false,
         "info": "",
         "env": []
@@ -26,7 +26,7 @@
     {
         "id": "c3197e3a0e4ae468",
         "type": "tab",
-        "label": "renameing",
+        "label": "Z2M to ZHA renameing",
         "disabled": false,
         "info": "",
         "env": []
@@ -163,7 +163,7 @@
         "type": "file in",
         "z": "f6964f0b8c0fa18c",
         "name": "",
-        "filename": "/config/pending.txt",
+        "filename": "/config/devices.txt",
         "filenameType": "str",
         "format": "lines",
         "chunk": false,
@@ -174,7 +174,7 @@
         "y": 180,
         "wires": [
             [
-                "df1e94738eae7ec8"
+                "2990ab3eb794f11f"
             ]
         ]
     },
@@ -220,7 +220,7 @@
         "type": "file in",
         "z": "f6964f0b8c0fa18c",
         "name": "",
-        "filename": "/config/pending.txt",
+        "filename": "/config/devices.txt",
         "filenameType": "str",
         "format": "lines",
         "chunk": false,
@@ -277,7 +277,7 @@
         "id": "b9b6ad3b8b430931",
         "type": "exec",
         "z": "f6964f0b8c0fa18c",
-        "command": "grep '^\\s*0x' /config/pending.raw.txt | uniq > /config/pending.txt",
+        "command": "grep '^\\s*0x' /config/raw.txt | uniq > /config/devices.txt",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -285,7 +285,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 430,
+        "x": 410,
         "y": 80,
         "wires": [
             [],
@@ -322,6 +322,31 @@
         "x": 140,
         "y": 40,
         "wires": []
+    },
+    {
+        "id": "2990ab3eb794f11f",
+        "type": "delay",
+        "z": "f6964f0b8c0fa18c",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "0.5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "df1e94738eae7ec8"
+            ]
+        ]
     },
     {
         "id": "1cb51726d9d22cc1",
@@ -410,7 +435,7 @@
         "props": [
             {
                 "p": "groupname",
-                "v": "F1 Floor Lobby",
+                "v": "F1 Room 4 Lights",
                 "vt": "str"
             }
         ],
@@ -627,7 +652,7 @@
         "id": "3a9589bb9c8b1eb5",
         "type": "exec",
         "z": "ceaa348efda03b13",
-        "command": "grep '^\\s*0x' /config/raw.txt | uniq > devices.txt",
+        "command": "grep '^\\s0x' /config/raw.txt | uniq > devices.txt",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -671,7 +696,7 @@
         "props": [
             {
                 "p": "groupname",
-                "v": "F1 Floor Lobby",
+                "v": "F1 Room 4 Lights",
                 "vt": "str"
             }
         ],
